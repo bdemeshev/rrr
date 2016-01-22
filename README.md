@@ -1,2 +1,0 @@
-# rrr
-latex, Rnw, Rmd
