@@ -17,6 +17,11 @@ output: html_document
 Занятия проходят по пятницам в 3231 на Шаболовке 26 с 18:10 до 21:00.
 
 * [Семинар 3](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_03.R): загрузка данных (csv, excel и прочее). Сортировка, отбор переменных, отбор наблюдений, создание переменных. Длинные и широкие таблицы. Группировка и агрегирование данных: стратегия разделяй-властвуй и соединяй! Метод наименьших квадратов. Три уровня информации о модели (пакет `broom`).
+    - пакет [reshape2](http://seananderson.ca/2013/10/19/reshape.html): длинные и широкие таблицы
+    - пакет [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html): базовые операции с табличками
+    - что можно [достать из обычной регрессии](http://bdemeshev.github.io/r_cycle/cycle_files/02_ols_oranges.html)
+    - пакет [broom](https://cran.r-project.org/web/packages/broom/vignettes/broom.html): стандартное представление результатов разных моделей
+
 * [Семинар 2](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_02.R) векторы, таблички с данными. Сортировка, отбор наблюдений, создание новых переменных. Синтаксис с использованием «трубочки» `%>%`.
 * Семинар 1. Первая встреча, обсуждение тем, программы. На следующие занятия приносим свои ноуты: R, Rstudio, Latex.
 
