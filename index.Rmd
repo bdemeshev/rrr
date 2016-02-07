@@ -16,6 +16,9 @@ output: html_document
 --------------
 Занятия проходят по пятницам в 3231 на Шаболовке 26 с 18:10 до 21:00.
 
+
+* [Семинар 4](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_04.R): пример решения практической задачи в R. Три способа посчитать границы для выбросов по каждой строке. Исходный [файл с данными](https://github.com/bdemeshev/rrr/raw/master/examples/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.csv).
+
 * [Семинар 3](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_03.R): загрузка данных (csv, excel и прочее). Сортировка, отбор переменных, отбор наблюдений, создание переменных. Длинные и широкие таблицы. Группировка и агрегирование данных: стратегия разделяй-властвуй и соединяй! Метод наименьших квадратов. Три уровня информации о модели (пакет `broom`).
     - пакет [reshape2](http://seananderson.ca/2013/10/19/reshape.html): длинные и широкие таблицы
     - пакет [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html): базовые операции с табличками
