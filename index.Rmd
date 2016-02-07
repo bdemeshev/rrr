@@ -1,7 +1,7 @@
 ---
 title: "Воспроизводимые исследования с R"
 author: "Boris Demeshev"
-date: "22 January 2016"
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
 output: html_document
 ---
 
