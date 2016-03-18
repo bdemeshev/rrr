@@ -1,0 +1,72 @@
+---
+title: "Регрессии бывают разные :)"
+author: "Вениамин Пух"
+date: "18 March 2016"
+output: html_document
+lang: russian
+---
+
+Несколько полезных пакетов
+```{r, message = FALSE}
+library("dplyr")
+library("quantreg")
+library("ggplot2")
+library("broom")
+library("texreg")
+```
+
+
+Загрузим данные о стоимости квартир и проверим, что всё загрузилось успешно :)
+```{r}
+flats <- read.table("~/Downloads/flats_moscow.txt",
+  header = TRUE, sep = "\t", dec = ".")
+glimpse(flats)
+```
+
+Оценим обычную парную регрессию с помощью МНК, метода минимальных абсолютных значений и квантильную регрессию:
+
+```{r}
+flats2 <- mutate(flats, othersp = totsp - livesp - kitsp)
+ols <- lm(data = flats2, price ~ totsp)
+med <- rq(data = flats2, price ~ totsp, tau = 0.5)
+q_reg1 <- rq(data = flats2, price ~ totsp,
+            tau = 0.1)
+q_reg9 <- rq(data = flats2, price ~ totsp,
+            tau = 0.9)
+
+```
+
+И красивая табличка
+```{r, results = "asis", warning = FALSE}
+htmlreg(list(ols, med, q_reg1, q_reg9))
+```
+
+И график:
+```{r}
+plot0 <- qplot(data = flats2, x = totsp, y = price)
+plot1 <- plot0 +
+  ggtitle("Стоимость квартир в Москве в 2001 (?) г.") +
+  xlab("Общая площадь (м^2)") +
+  ylab("Цена (тысяч у.е.)")
+plot2 <- plot1 + stat_smooth(method = "lm", se = FALSE)
+plot3 <- plot2 + stat_smooth(method = "rq", se = FALSE,
+          colour = "red", size = 0.7, linetype = "dotted",
+          method.args = list(tau = 0.1) ) +
+          stat_smooth(method = "rq", se = FALSE,
+              colour = "red", size = 0.7, linetype = "dotted",
+              method.args = list(tau = 0.9) )
+plot3
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
