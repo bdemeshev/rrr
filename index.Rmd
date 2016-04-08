@@ -17,6 +17,7 @@ output: html_document
 --------------
 Занятия проходят по пятницам в 3231 на Шаболовке 26 с 18:10 до 21:00.
 
+* [Семинар 11](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_11_pca.R): Метод главных компонент
 
 * [Семинар 10](https://github.com/bdemeshev/rrr/raw/master/scripts/sem_10_lasso.R): LASSO и гребневая регрессия
 
